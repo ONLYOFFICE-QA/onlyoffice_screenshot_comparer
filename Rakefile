@@ -16,7 +16,9 @@ task :compare_files do
     screens2 = OnlyofficeScreenshotComparer::S3ScreenshotDownloader.new(version: version2).download_screens(current_file)
     list1 = OnlyofficeScreenshotComparer::FileScreenshotList.new(screens1)
     list2 = OnlyofficeScreenshotComparer::FileScreenshotList.new(screens2)
-    output << "File #{current_file}\n#{list1.compare(list2)[:result]}\n"
+    compare = list1.compare(list2)
+    output << "File #{current_file}\n#{compare.result}\n"
+    next if compare.same?
   end
   output.close
 end

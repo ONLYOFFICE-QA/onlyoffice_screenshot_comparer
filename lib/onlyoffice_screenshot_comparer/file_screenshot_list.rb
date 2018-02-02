@@ -1,4 +1,5 @@
 require 'mini_magick'
+require_relative 'file_screenshot_list/compare_result'
 
 module OnlyofficeScreenshotComparer
   # Class for storing screeshots for file
@@ -23,7 +24,7 @@ module OnlyofficeScreenshotComparer
         compare_result = `compare -metric RMSE #{current_file} #{file_to_compare} #{diff_file} 2>&1`
         result << "Image #{File.basename(current_file)} differs for #{compare_result}\n"
       end
-      { result: result, diff_path: diff_path }
+      CompareResult.new(result, diff_path)
     end
   end
 end
