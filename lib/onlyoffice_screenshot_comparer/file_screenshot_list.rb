@@ -17,7 +17,7 @@ module OnlyofficeScreenshotComparer
       result = ''
       files.each_with_index do |current_file, index|
         file_to_compare = other.files[index]
-        compare_result = `compare -metric RMSE #{current_file} #{file_to_compare} NULL 2>&1`
+        compare_result = `compare -metric RMSE #{current_file} #{file_to_compare} /dev/null 2>&1`
         result << "Image #{File.basename(current_file)} differs for #{compare_result}\n"
       end
       result
