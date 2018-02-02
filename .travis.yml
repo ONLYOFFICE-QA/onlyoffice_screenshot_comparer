@@ -1,5 +1,4 @@
 language: ruby
-
 rvm:
 - ruby-head
 - 2.5.0
@@ -7,10 +6,13 @@ rvm:
 - 2.3.6
 - 2.2.9
 - 2.1.10
-
 before_install:
   - gem update --system
 install:
   - bundle install --without development
 script:
   - bundle exec rspec
+env:
+  global:
+  - secure: ta2KwMOgCufV7s4io4no54ohMahfk+xEdfsB/ZhrO1sbR7DTjv2FfCLXCx9kWDATmADaV6feGg0XB4qKbPe86LSx/pwGwQoqsUkBzBSVTtslksD7CB8YCUeFqIT3xiNl+jsjRuqAliqwDxUN30XOYD/2QRun2vJdncvc57gYwgWZ3T2hV7HQoIfXiooFn//w4dZfcsakpxAERwCuUZA5EiOc9gjUuca485KDOdzqDxqHiA+twmHy5dIGxklYJ0HzexAa0uPbarRuLC9foGyGAzFjwMLcrtfnhUp8STcyuwZcNw+amKu8R8c8OqrTpb5h0ASwALY1TRh2vj1Q9HlVdEjd/EEeKC65sMWOcWwJRa0yx/mXplPXq+gBe4jp9r6X/aY/7MGunN6X/Vghmlae4yBJOW49G0a0LvqF7y9S5eTJ+1aCNS29wYnpt5+mnN6r2tZRFyatjxQmzqH8+9qdMUV80s1sUGdbkjfEd4+bcRRd65o0+B0tb7bJ9fWbLuu7dmuloZjpTSHHyka2c+tOsxEyBgUyXe1T5kD+IAGQcphd+BZcQqHdWx9H3Riu8zxQTBpF/iKSJfVjmG61eO1t+s9JXR4+aV199LDcBeHfRtDlr0m+vXlEjXZyt51o8/fbn0ImN3DI1UKm+TUJuGrmOv7aGxq6IBy8OKOS1Iq4c7E=
+  - secure: lz2+G2W/px/GSapmYddgu9x2p0PzfCjR7+19V5z1xh8A09g5FCeuNxuE85fYqhhn8hzYTMCpWalXCsqt19cVVWAtUC+0KtCO13+BU0OKf4xFBPPiu52zaKtw9pS7Z53zne8VcaE7yQ9UCiYV/4hxvkaGa0Us0KmwlVaeU9iAVAcAAVkFvcrB0QGAKvnKB+/JHs1dxpNm4S1gM+6NRBBJyPgVov6E25e2IPMJkg3Ud95uQorBS84D8ytmC1vxXhSW2Z2av0h4OqQOCljd9l+wUIJllC8mB7sXmXscfAqZULk6g9KuXmWZMNnMM+0FAGYVCsTeFewwHM2VWlahRcReJ+9dV1eKyhpU+Ak8SHKseK/AuXH5kYcTVtO33Dc8lJKXsuUwRVKegJ1r+15+PTud5qgsllzkIvZNehual+hLi77Og0Y6R20bziJ0mP5xhsbH/ATrjNPJGFXZXLvr7dLjzgbXWpyfUbv53AgPe+QSdm5byKh4SrAiRXGwoCWqRYmKp+l0lC3mgRYc27ClE6xLFAGvtHzvp4S8wIrBIdAni8x1uhcowf5i/FIu28PvgRF9vqQlxFnZw0llAVICpIF0pC8cLd4tk9HIUOh9bxvBW6sIeBMyDPMXkBJWuTv1UipiYr1n9Syq3NBmM0DRrwldJ6/TCLvN2xjknhxDCXisZh0=
