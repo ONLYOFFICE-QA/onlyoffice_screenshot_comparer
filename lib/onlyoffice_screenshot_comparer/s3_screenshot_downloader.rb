@@ -12,9 +12,20 @@ module OnlyofficeScreenshotComparer
 
     # @return [Array<String>] list of doc screenshot stored
     def document_list
-      list_files = @s3.bucket.objects(prefix: @version).collect(&:key)
+      list_files = @s3.get_files_by_prefix(@version)
       dirs = list_files.map { |cur_file| File.dirname(cur_file) }.uniq
       dirs.map { |cur_file| File.basename(cur_file) }.uniq
+    end
+
+    # @param document [String] name of doc
+    # @return [String] path to file dir
+    def download_screens(document)
+      dir_for_screens = Dir.mktmpdir
+      screenshot_files = @s3.get_files_by_prefix("#{@version}/#{document}")
+      screenshot_files.each do |file|
+        @s3.download_file_by_name(file, dir_for_screens)
+      end
+      dir_for_screens
     end
   end
 end
