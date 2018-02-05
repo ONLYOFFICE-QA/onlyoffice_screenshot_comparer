@@ -10,3 +10,4 @@ doc
 coverage
 Gemfile.lock
 .idea
+.rake_tasks~
