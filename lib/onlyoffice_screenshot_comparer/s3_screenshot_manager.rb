@@ -3,7 +3,7 @@ require 'onlyoffice_s3_wrapper'
 
 module OnlyofficeScreenshotComparer
   # Class for downloading screenshots for file
-  class S3ScreenshotDownloader
+  class S3ScreenshotManager
     def initialize(s3: OnlyofficeS3Wrapper::AmazonS3Wrapper.new(bucket_name: 'documentserver-docs-images', region: 'us-east-1'),
                    version: nil)
       @s3 = s3
@@ -26,6 +26,16 @@ module OnlyofficeScreenshotComparer
         @s3.download_file_by_name(file, dir_for_screens)
       end
       dir_for_screens
+    end
+
+    # @param result_path [String] folder with result
+    # @param s3_name [String] s3 folder name
+    # @return [void] path to file dir
+    def upload_compare_results(result_path, s3_name)
+      list_of_files = Dir["#{result_path}/*"]
+      list_of_files.each do |file|
+        @s3.upload_file(file, "compare_result/#{s3_name}/")
+      end
     end
   end
 end
