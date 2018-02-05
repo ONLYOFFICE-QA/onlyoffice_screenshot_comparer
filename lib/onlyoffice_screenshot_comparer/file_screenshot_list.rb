@@ -14,7 +14,6 @@ module OnlyofficeScreenshotComparer
 
     # @param other [FileScreenshotList] compare with other screenshot list
     def compare(other)
-      return "Count of file images are not equal: #{files.length} vs #{other.files.length}" if files.length != other.files.length
       diff_path = Dir.mktmpdir
       result = ''
       files.each_with_index do |current_file, index|
