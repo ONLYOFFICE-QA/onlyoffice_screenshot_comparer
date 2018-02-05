@@ -4,6 +4,9 @@ require 'onlyoffice_s3_wrapper'
 module OnlyofficeScreenshotComparer
   # Class for downloading screenshots for file
   class S3ScreenshotManager
+    # @return [OnlyofficeS3Wrapper::AmazonS3Wrapper.new] s3 wrapper
+    attr_reader :s3
+
     def initialize(s3: OnlyofficeS3Wrapper::AmazonS3Wrapper.new(bucket_name: 'documentserver-docs-images', region: 'us-east-1'),
                    version: nil)
       @s3 = s3
