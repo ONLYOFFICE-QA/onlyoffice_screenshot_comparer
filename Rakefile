@@ -6,9 +6,9 @@ RSpec::Core::RakeTask.new(:spec)
 task default: :spec
 
 desc 'Task for generate report of comparing files'
-task :compare_files do
-  version1 = 'ver. 5.0.7 (build:38)'
-  version2 = 'ver. 5.0.99 (build:463)'
+task :compare_files, [:version1, :version2] do |_t, args|
+  version1 = args[:version1]
+  version2 = args[:version2]
   output = File.open("compare_#{version1}_#{version2}.log", 'w')
   docs = OnlyofficeScreenshotComparer::S3ScreenshotManager.new(version: version1).document_list
   docs.each do |current_file|
