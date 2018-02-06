@@ -1,4 +1,5 @@
 require 'mini_magick'
+require_relative 'file_screenshot_list/compare_result'
 
 module OnlyofficeScreenshotComparer
   # Class for storing screeshots for file
@@ -13,14 +14,16 @@ module OnlyofficeScreenshotComparer
 
     # @param other [FileScreenshotList] compare with other screenshot list
     def compare(other)
-      return "Count of file images are not equal: #{files.length} vs #{other.files.length}" if files.length != other.files.length
+      diff_path = Dir.mktmpdir
       result = ''
       files.each_with_index do |current_file, index|
+        current_name = File.basename(current_file)
         file_to_compare = other.files[index]
-        compare_result = `compare -metric RMSE #{current_file} #{file_to_compare} NULL 2>&1`
+        diff_file = "#{diff_path}/diff-#{current_name}"
+        compare_result = `compare -metric RMSE #{current_file} #{file_to_compare} #{diff_file} 2>&1`
         result << "Image #{File.basename(current_file)} differs for #{compare_result}\n"
       end
-      result
+      CompareResult.new(result, diff_path)
     end
   end
 end
