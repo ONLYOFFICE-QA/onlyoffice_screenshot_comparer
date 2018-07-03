@@ -6,10 +6,13 @@ module OnlyofficeScreenshotComparer
   class FileScreenshotList
     # @return [Array<String>] list of files paths
     attr_accessor :files
+    # @return [String] path to directory
+    attr_reader :path
 
     # @param path [String] path to screenshots
     def initialize(path)
-      @files = Dir["#{path}/*"].map(&File.method(:realpath)).sort
+      @path = path
+      @files = Dir["#{@path}/*"].map(&File.method(:realpath)).sort
     end
 
     # @param other [FileScreenshotList] compare with other screenshot list
