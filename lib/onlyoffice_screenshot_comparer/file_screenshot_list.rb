@@ -26,7 +26,7 @@ module OnlyofficeScreenshotComparer
         file_to_compare = other.files[index]
         diff_file = "#{diff_path}/diff-#{current_name}"
         compare_result = `compare -metric RMSE #{current_file} #{file_to_compare} #{diff_file} 2>&1`
-        result << "Image #{File.basename(current_file)} differs for #{compare_result}\n"
+        result += "Image #{File.basename(current_file)} differs for #{compare_result}\n"
       end
       CompareResult.new(result, diff_path)
     end
