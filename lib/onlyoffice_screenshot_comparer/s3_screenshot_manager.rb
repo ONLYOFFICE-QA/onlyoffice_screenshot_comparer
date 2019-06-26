@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'mini_magick'
 require 'onlyoffice_s3_wrapper'
 

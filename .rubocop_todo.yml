@@ -13,23 +13,6 @@ Naming/UncommunicativeMethodParamName:
   Exclude:
     - 'lib/onlyoffice_screenshot_comparer/s3_screenshot_manager.rb'
 
-# Offense count: 10
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: always, never
-Style/FrozenStringLiteralComment:
-  Exclude:
-    - 'Rakefile'
-    - 'gems.rb'
-    - 'lib/onlyoffice_screenshot_comparer.rb'
-    - 'lib/onlyoffice_screenshot_comparer/file_screenshot_list.rb'
-    - 'lib/onlyoffice_screenshot_comparer/file_screenshot_list/compare_result.rb'
-    - 'lib/onlyoffice_screenshot_comparer/s3_screenshot_manager.rb'
-    - 'spec/examples/compare_result_spec.rb'
-    - 'spec/examples/comparer_spec.rb'
-    - 'spec/examples/downloader_spec.rb'
-    - 'spec/spec_helper.rb'
-
 # Offense count: 23
 # Cop supports --auto-correct.
 # Configuration parameters: AutoCorrect, AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.

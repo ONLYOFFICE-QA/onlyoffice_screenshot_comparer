@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'lib/onlyoffice_screenshot_comparer.rb'
 require 'rspec/core/rake_task'
 

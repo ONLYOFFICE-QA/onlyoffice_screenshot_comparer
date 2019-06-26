@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module OnlyofficeScreenshotComparer
   # Class for storing info about comparision
   class CompareResult
