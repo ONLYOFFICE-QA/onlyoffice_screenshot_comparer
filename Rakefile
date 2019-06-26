@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'lib/onlyoffice_screenshot_comparer.rb'
 require 'rspec/core/rake_task'
 
@@ -20,6 +22,7 @@ task :compare_files, [:version1, :version2] do |_t, args|
     compare = list1.compare(list2)
     output << "File #{current_file}\n#{compare.result}\n"
     next if compare.same?
+
     screens1.upload_compare_results(compare.diff_path, "#{diff_s3_path}#{current_file}")
     screens1.upload_compare_results(list1.path, "#{diff_s3_path}#{current_file}/#{version1}")
     screens1.upload_compare_results(list2.path, "#{diff_s3_path}#{current_file}/#{version2}")
