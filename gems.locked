@@ -37,7 +37,7 @@ GEM
     jaro_winkler (1.5.4)
     jmespath (1.4.0)
     json (2.2.0)
-    mini_magick (4.9.5)
+    mini_magick (4.10.1)
     onlyoffice_file_helper (0.1.0)
       onlyoffice_logger_helper (~> 1)
       rubyzip (~> 1.0)
