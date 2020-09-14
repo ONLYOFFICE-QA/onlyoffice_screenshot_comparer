@@ -13,12 +13,6 @@ Naming/MethodParameterName:
   Exclude:
     - 'lib/onlyoffice_screenshot_comparer/s3_screenshot_manager.rb'
 
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/RedundantFileExtensionInRequire:
-  Exclude:
-    - 'Rakefile'
-
 # Offense count: 3
 # Cop supports --auto-correct.
 # Configuration parameters: AutoCorrect, AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
