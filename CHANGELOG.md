@@ -5,6 +5,7 @@
 ### New Features
 
 * Add `dependabot` config
+* Add `markdownlint` check in CI
 
 ### Changes
 
