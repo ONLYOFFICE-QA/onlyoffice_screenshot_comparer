@@ -1,3 +1,7 @@
+require:
+  - rubocop-performance
+  - rubocop-rake
+
 inherit_from: .rubocop_todo.yml
 
 AllCops:
