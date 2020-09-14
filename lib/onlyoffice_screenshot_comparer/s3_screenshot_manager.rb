@@ -9,7 +9,8 @@ module OnlyofficeScreenshotComparer
     # @return [OnlyofficeS3Wrapper::AmazonS3Wrapper.new] s3 wrapper
     attr_reader :s3
 
-    def initialize(s3: OnlyofficeS3Wrapper::AmazonS3Wrapper.new(bucket_name: 'documentserver-docs-images', region: 'us-east-1'),
+    def initialize(s3: OnlyofficeS3Wrapper::AmazonS3Wrapper.new(bucket_name: 'documentserver-docs-images',
+                                                                region: 'us-east-1'),
                    version: nil)
       @s3 = s3
       @version = version
