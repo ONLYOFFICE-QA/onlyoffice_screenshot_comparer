@@ -8,3 +8,5 @@ inherit_from: .rubocop_todo.yml
 AllCops:
   NewCops: enable
 
+Naming/MethodParameterName:
+  AllowedNames: s3
