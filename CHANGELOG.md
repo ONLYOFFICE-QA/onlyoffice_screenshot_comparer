@@ -7,7 +7,8 @@
 * Add `dependabot` config
 * Add `markdownlint` check in CI
 * Add `rubocop` check in CI
-* Add support of `rubocop-performance` and `rubocop-rake`
+* Add support of `rubocop-performance`, `rubocop-rake`,
+  `rubocop-rspec`
 
 ### Changes
 
