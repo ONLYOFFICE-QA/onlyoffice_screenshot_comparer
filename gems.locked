@@ -35,7 +35,7 @@ GEM
     iniparse (1.5.0)
     jmespath (1.4.0)
     json (2.3.1)
-    mini_magick (4.10.1)
+    mini_magick (4.11.0)
     onlyoffice_file_helper (0.3.0)
       onlyoffice_logger_helper (~> 1)
       rubyzip (>= 1, < 3)
