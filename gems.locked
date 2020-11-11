@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/onlyoffice-testing-robot/onlyoffice_s3_wrapper
-  revision: 9bf891ed4fd0a3721804ee683f462d5f1ed11f75
+  revision: 7b7368b050411316bc88bdb6404c22d038bc2630
   specs:
     onlyoffice_s3_wrapper (0.3.0)
-      aws-sdk-s3 (= 1.83.2)
+      aws-sdk-s3 (= 1.84.0)
       onlyoffice_file_helper (= 0.3.0)
 
 GEM
@@ -20,7 +20,7 @@ GEM
     aws-sdk-kms (1.39.0)
       aws-sdk-core (~> 3, >= 3.109.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.83.2)
+    aws-sdk-s3 (1.84.0)
       aws-sdk-core (~> 3, >= 3.109.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.1)
