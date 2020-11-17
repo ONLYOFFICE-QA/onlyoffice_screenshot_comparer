@@ -14,7 +14,7 @@ module OnlyofficeScreenshotComparer
     # @param path [String] path to screenshots
     def initialize(path)
       @path = path
-      @files = Dir["#{@path}/*"].map(&File.method(:realpath)).sort
+      @files = Dir["#{@path}/*"].map { |file| File.realpath(file) }.sort
     end
 
     # @param other [FileScreenshotList] compare with other screenshot list
