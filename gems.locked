@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/onlyoffice-testing-robot/onlyoffice_s3_wrapper
-  revision: 6e5f0b5a8057447634df45aeab47383a629516d7
+  revision: e7975eab257aeec62ee7b32c3ad9a9d808d0b5bd
   specs:
     onlyoffice_s3_wrapper (0.3.0)
       aws-sdk-s3 (= 1.84.1)
@@ -11,8 +11,8 @@ GEM
   specs:
     ast (2.4.1)
     aws-eventstream (1.1.0)
-    aws-partitions (1.393.0)
-    aws-sdk-core (3.109.2)
+    aws-partitions (1.394.0)
+    aws-sdk-core (3.109.3)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.239.0)
       aws-sigv4 (~> 1.1)
@@ -39,7 +39,7 @@ GEM
     onlyoffice_file_helper (0.3.0)
       onlyoffice_logger_helper (~> 1)
       rubyzip (>= 1, < 3)
-    onlyoffice_logger_helper (1.0.3)
+    onlyoffice_logger_helper (1.1.0)
     overcommit (0.57.0)
       childprocess (>= 0.6.3, < 5)
       iniparse (~> 1.4)
