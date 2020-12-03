@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/onlyoffice-testing-robot/onlyoffice_s3_wrapper
-  revision: 7ff419e6652d501ba668aada738b25dadb2b3427
+  revision: e4388f68a1475628251fb5a38a423cc1920196a9
   specs:
     onlyoffice_s3_wrapper (0.4.0)
       aws-sdk-s3 (~> 1)
