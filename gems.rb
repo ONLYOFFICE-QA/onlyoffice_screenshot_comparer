@@ -16,5 +16,5 @@ group :development do
 end
 
 gem 'mini_magick'
-gem 'onlyoffice_s3_wrapper', git: 'https://github.com/onlyoffice-testing-robot/onlyoffice_s3_wrapper'
+gem 'onlyoffice_s3_wrapper'
 gem 'rake'
