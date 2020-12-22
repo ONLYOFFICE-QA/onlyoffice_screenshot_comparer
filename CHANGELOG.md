@@ -15,3 +15,4 @@
 * Drop support of ruby 2.4 since it's EOLed
 * Use `GitHub Actions` instead of TravisCI
 * Fixes from update `rubocop-performance` to `v1.9.0`
+* Use gem `onlyoffice_s3_wrapper` from rubygems, not from sources
