@@ -10,3 +10,7 @@ AllCops:
 
 Naming/MethodParameterName:
   AllowedNames: s3
+
+# We use `gems.rb` in this project
+Bundler/GemFilename:
+  EnforcedStyle: gems.rb
