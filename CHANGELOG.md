@@ -16,3 +16,4 @@
 * Use `GitHub Actions` instead of TravisCI
 * Fixes from update `rubocop-performance` to `v1.9.0`
 * Use gem `onlyoffice_s3_wrapper` from rubygems, not from sources
+* Move to new uploader for `codecov`
